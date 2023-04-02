@@ -110,11 +110,7 @@ end)
 
 Tab1:Line()
 
-Tab2:Seperator("Teleport")
-
-Tab2:Seperator("Training places")
-
-Tab2.Seperator("Strength")
+Tab2:Seperator("Strength")
 
 Tab2:Button("100 Strength",function()
 game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(25.08598518371582, 65.09265899658203, 149.81715393066406)
