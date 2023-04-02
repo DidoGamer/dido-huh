@@ -1,0 +1,247 @@
+local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
+
+local Library = DarkraiX:Window("Dhia hub", "", "", Enum.KeyCode.RightControl)
+
+Tab1 = Library:Tab("Auto-Stats")
+Tab2 = Library:Tab("Teleport")
+
+Tab1:Seperator("Auto Train")
+
+Tab1:Toggle("Auto Strength", false, function(value)
+    getgenv().autos = value
+    spawn(function()
+        while autos == true do
+            local Player = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.MainClient.StatModuleClient)
+            Player.SendToServer("Strength")
+            wait()
+        end
+    end)
+end)
+
+Tab1:Line()
+
+Tab1:Toggle("Auto Durability", false, function(value)
+    getgenv().autod = value
+    spawn(function()
+        while autod == true do
+            local Player = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.MainClient.StatModuleClient)
+            Player.SendToServer("Durability")
+            wait()
+        end
+    end)
+end)
+
+Tab1:Line()
+
+Tab1:Toggle("Auto Chakra", false, function(value)
+    getgenv().autoc = value
+    spawn(function()
+        while autoc == true do
+            local Player = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.MainClient.StatModuleClient)
+            Player.SendToServer("Chakra")
+            wait()
+        end
+    end)
+end)
+
+Tab1:Line()
+
+Tab1:Button("x2 Massive Chakra",function()
+
+local replicated = game:GetService('ReplicatedStorage')
+
+
+
+coroutine.wrap(function()
+
+for i = 1,100000 do -- do howerver much you want
+
+task.spawn(function()
+
+    replicated.RSPackage.Events.StatFunction:InvokeServer('Stat', 'Chakra')
+
+end)
+
+end
+
+end)()
+
+
+
+-- Customize how bad you want it to lag here
+
+for i = 1,500 do
+
+for i = 1,1000 do
+
+    for i = 1,3000 do
+
+    end
+
+end
+    end
+end)
+
+Tab1:Line()
+
+Tab1:Toggle("Auto Speed", false, function(value)
+    getgenv().autosp = value
+    spawn(function()
+        while autosp == true do
+            local Player = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.MainClient.StatModuleClient)
+            Player.SendToServer("Speed")
+            wait()
+        end
+    end)
+end)
+
+Tab1:Line()
+
+Tab1:Toggle("Auto Agility", false, function(value)
+    getgenv().autoa = value
+    spawn(function()
+        while autoa == true do
+            local Player = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.MainClient.StatModuleClient)
+            Player.SendToServer("Agility")
+            wait()
+        end
+    end)
+end)
+
+Tab1:Line()
+
+Tab2:Seperator("Teleport")
+
+Tab2:Seperator("Training places")
+
+Tab2.Seperator("Strength")
+
+Tab2:Button("100 Strength",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(25.08598518371582, 65.09265899658203, 149.81715393066406)
+end)
+
+Tab2:Button("10K Strength",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1373.4832763671875, 141.9739227294922, -122.04920196533203)
+end)
+
+Tab2:Button("100K Strength",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1223.7125244140625, 58.973960876464844, 500.0813293457031)
+end)
+
+Tab2:Button("1M Strength",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-870.51904296875, 81.5602035522461, 197.50668334960938)
+end)
+
+Tab2:Button("10M Strength",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2228.1240234375, 617.6635131835938, 553.9738159179688)
+end)
+
+Tab2:Button("100M Strength",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.943288803100586, 70.97394561767578, -1288.8729248046875)
+end)
+
+Tab2:Button("1B Strength",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(755.359619140625, 150.2983856201172, 949.0203247070312)
+end)
+
+Tab2:Button("100B Strength",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1879.131591796875, 141.17391967773438, 111.77738189697266)
+end)
+
+Tab2.Line()
+
+Tab2.Seperator("Durability")
+
+Tab2:Button("100 Durability",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(72.46851348876953, 64.98395538330078, 467.62860107421875)
+end)
+
+Tab2:Button("10K Durability",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1575.69970703125, 61.357791900634766, -524.1725463867188)
+end)
+
+Tab2:Button("100K Durability",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-45.37300109863281, 90.71924591064453, 2045.738037109375)
+end)
+
+Tab2:Button("1M Durability",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-596.8920288085938, 178.9739227294922, 747.2946166992188)
+end)
+
+Tab2:Button("10M Durability",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1069.3577880859375, 233.09005737304688, -933.3154296875)
+end)
+
+Tab2:Button("100M Durability",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-307.7406005859375, 61.973960876464844, -1635.775634765625)
+end)
+
+Tab2:Button("1B Durability",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2496.89892578125, 1539.5496826171875, -348.1417541503906)
+end)
+
+Tab2:Button("100B Durability",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2704.38916015625, -227.72178649902344, 371.0977783203125)
+end)
+
+Tab2.Line()
+
+Tab2.sperator("Chakra")
+
+Tab2:Button("500 Chakra",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new()
+end)
+
+Tab2:Button("15K Chakra",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1454.2132568359375, 154.3537139892578, -567.1671752929688)
+end)
+
+Tab2:Button("150K Chakra",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(942.2072143554688, 140.9739227294922, 803.8221435546875)
+end)
+
+Tab2:Button("1.5M Chakra",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1589.6517333984375, 388.1739196777344, 687.4178466796875)
+end)
+
+Tab2:Button("15M Chakra",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(371.6840515136719, -150.0260772705078, -1811.92529296875)
+end)
+
+Tab2:Button("250M Chakra",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1050.4541015625, 251.63510131835938, -606.01708984375)
+end)
+
+Tab2:Button("1B Chakra",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3085.283203125, 111.05451202392578, 1123.0596923828125)
+end)
+
+Tab2:Button("100B Chakra",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1479.389892578125, 85.61856079101562, 1923.058349609375)
+end)
+
+Tab2.Line
+
+Tab2.seperator("Speed & Agility")
+
+Tab2:Button("100 speed",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-77.12101745605469, 61.1739616394043, -486.42266845703125)
+end)
+
+Tab2:Button("100 Agility",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(72.46851348876953, 64.98395538330078, 467.62860107421875)
+end)
+
+Tab2:Button("10K Speed & Agility",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-391.1148681640625, 122.37850952148438, -59.05187225341797)
+end)
+
+Tab2:Button("100K Speed & Agility",function()
+game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3523.052734375, 59.973960876464844, 168.33282470703125)
+end)
+
+Tab2.Line()
+
+--[[
+"DarkraiX:ToggleUi()"
+]]--
